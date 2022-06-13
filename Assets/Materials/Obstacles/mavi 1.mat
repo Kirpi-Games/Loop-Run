@@ -2,15 +2,18 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mavi 1
   m_Shader: {fileID: 4800000, guid: 08ed0d9dfc7b9d54480990896ab62fe8, type: 3}
-  m_ShaderKeywords: CURVEDWORLD_BEND_ID_1 CURVEDWORLD_BEND_TYPE_CLASSICRUNNER_Z_POSITIVE
-    _EMISSION
+  m_ValidKeywords:
+  - CURVEDWORLD_BEND_TYPE_CLASSICRUNNER_Z_POSITIVE
+  - _EMISSION
+  m_InvalidKeywords:
+  - CURVEDWORLD_BEND_ID_1
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -57,6 +60,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cull: 0
@@ -87,9 +91,9 @@ Material:
     - _ZWrite: 1
     - __dummy__: 0
     m_Colors:
-    - _Color: {r: 0.25, g: 0.39875442, b: 1, a: 1}
+    - _Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
     - _CurvedWorldBendSettings: {r: 2, g: 1, b: 0, a: 0}
-    - _EmissionColor: {r: 0.008543986, g: 0.12180724, b: 1.8113208, a: 1}
+    - _EmissionColor: {r: 0.24287377, g: 0.24924834, b: 0.33653098, a: 1}
     - _HColor: {r: 0.40970984, g: 0.9144361, b: 0.9339623, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.3254902}
     - _SColor: {r: 0.16153437, g: 0.30460122, b: 0.6226415, a: 1}

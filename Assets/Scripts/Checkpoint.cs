@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Akali.Scripts.Managers;
 using Akali.Scripts.Managers.StateMachine;
+using Akali.Ui_Materials.Scripts.Components;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
@@ -16,6 +17,7 @@ public class Checkpoint : MonoBehaviour
             {
                 if (!PlayerController.Instance.isFail)
                 {
+                    MoneyText.Instance.IncreaseMoney(250);
                     print("Collided");
                     PlayerController.Instance.SetCheckpoint(transform);
                     AkaliLevelManager.Instance.LevelIsCompleted();

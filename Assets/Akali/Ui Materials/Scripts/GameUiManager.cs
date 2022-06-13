@@ -8,7 +8,7 @@ namespace Akali.Ui_Materials.Scripts
     {
         public GameObject mainMenuTutorial;
         public GameObject playingLevel;
-        public GameObject playingCoinBar;
+        //public GameObject playingCoinBar;
         public GameObject background;
         public GameObject completeUi;
         //public GameObject completeButton;
@@ -47,7 +47,7 @@ namespace Akali.Ui_Materials.Scripts
         public void SetActivePlayingUi()
         {
             playingLevel.SetActive(!playingLevel.activeSelf);
-            playingCoinBar.SetActive(!playingCoinBar.activeSelf);
+            //playingCoinBar.SetActive(!playingCoinBar.activeSelf);
         }
 
         private void SetActiveCompleteUi()

@@ -28,7 +28,7 @@ namespace Akali.Scripts.Core
                 else
                 {
                     movement = true;
-                    failSpeed += 0.4f;
+                    failSpeed = 30;
                     transform.Translate(Vector3.forward * failSpeed * Time.deltaTime);
                 }
             }
@@ -44,3 +44,4 @@ namespace Akali.Scripts.Core
         }
     }
 }
+ 

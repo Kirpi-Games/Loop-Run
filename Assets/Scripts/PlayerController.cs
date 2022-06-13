@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Akali.Common;
 using Akali.Scripts;
+using Akali.Scripts.Managers;
 using Akali.Scripts.Managers.StateMachine;
 using UnityEngine;
 
@@ -33,10 +34,11 @@ public class PlayerController : Singleton<PlayerController>
         }
         else
         {
-            if (transform.position.z <= _checkpoint.transform.position.z + 2)
+            if (transform.position.z <= _checkpoint.transform.position.z + 2 && isFail)
             {
                 SwerveController.Instance.swerveSpeed = 0.4f;
                 isFail = false;
+                GameStateManager.Instance.SetGameState(GameStateManager.Instance.GameStateMainMenu);
             }    
         }
         
