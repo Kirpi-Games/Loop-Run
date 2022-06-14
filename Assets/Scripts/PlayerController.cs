@@ -40,7 +40,7 @@ public class PlayerController : Singleton<PlayerController>
         }
         else
         {
-            if (transform.position.z <= _checkpoint.transform.position.z + 2 && isFail)
+            if (transform.position.z <= _checkpoint.transform.position.z && isFail)
             {
                 SwerveController.Instance.sensitivity = 10f;
                 isFail = false;
