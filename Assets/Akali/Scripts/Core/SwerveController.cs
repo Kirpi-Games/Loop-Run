@@ -25,8 +25,7 @@ namespace Akali.Scripts
         private void StartSwerve()
         {
             if (Input.GetMouseButtonDown(0))
-            { 
-                MovementController.Instance.movement = true;
+            {
                 pressed = true;
                 PlayerController.Instance.isPlay = true;
                 secondPos.x = Input.mousePosition.x;
@@ -40,10 +39,25 @@ namespace Akali.Scripts
         public Vector3 firstPos,secondPos;
         public bool pressed;
         public float sensitivity;
-        public float speed;
+        public float speed,moveSpeed;
+
+        void Movement()
+        {
+            PlayerController.Instance.animator.SetBool("isRun",pressed);
+            if (pressed)
+            {
+                moveSpeed = 10;
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            }
+            else
+            {
+                moveSpeed = 0;
+            }
+        }
         
         private void Swerve()
         {
+            Movement();
             if (Input.GetMouseButtonDown(0))
             {
                 pressed = true;

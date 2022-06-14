@@ -12,21 +12,28 @@ public class Obstacle : MonoBehaviour
     {
         if (other.gameObject.layer == 3)
         {
-            MaleRagdoll(other.transform);
-            PlayerController.Instance.isFail = true;
-            SwerveController.Instance.sensitivity = 0;
-            Taptic.Failure();
+            if (!PlayerController.Instance.isFail)
+            {
+                MaleRagdoll(other.transform);
+                PlayerController.Instance.isFail = true;
+                SwerveController.Instance.sensitivity = 0;
+                SwerveController.Instance.moveSpeed = 0;
+                Taptic.Failure();
+                PlayerController.Instance.MoveLastCheckpoint();    
+            }
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.layer == 3)
+        if (!PlayerController.Instance.isFail)
         {
             MaleRagdoll(other.transform);
             PlayerController.Instance.isFail = true;
             SwerveController.Instance.sensitivity = 0;
+            SwerveController.Instance.moveSpeed = 0;
             Taptic.Failure();
+            PlayerController.Instance.MoveLastCheckpoint();    
         }
     }
     

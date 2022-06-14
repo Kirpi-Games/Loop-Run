@@ -18,6 +18,16 @@ public class LoopLevels : MonoBehaviour
     private void Start()
     {
         CreateTiles();
+        
+    }
+
+    private float transformX;
+    
+    void Update()
+    {
+        float xClamp = 0;
+        transformX = Mathf.Clamp(transformX, -xClamp, xClamp);
+        transform.position = new Vector3(transformX, 0, PlayerController.Instance.transform.position.z - 1);
     }
 
 

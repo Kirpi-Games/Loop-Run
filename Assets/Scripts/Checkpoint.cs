@@ -17,12 +17,16 @@ public class Checkpoint : MonoBehaviour
             {
                 if (!PlayerController.Instance.isFail)
                 {
-                    MoneyText.Instance.IncreaseMoney(250);
+                    MoneyText.Instance.IncreaseMoney(100);
                     print("Collided");
                     PlayerController.Instance.SetCheckpoint(transform);
                     AkaliLevelManager.Instance.LevelIsCompleted();
                     ParticleFlag(flag1);
                     ParticleFlag(flag2);
+                }
+                else
+                {
+                    PlayerController.Instance.isFail = false;
                 }
             }
         }

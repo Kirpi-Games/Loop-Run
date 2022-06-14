@@ -1995,7 +1995,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4554231245711290412}
-  - component: {fileID: 8780457471751553323}
   - component: {fileID: 8033729343472066619}
   m_Layer: 0
   m_Name: Level9
@@ -2024,21 +2023,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8780457471751553323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4554231245711290413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f38d51fe2161d41fc8d45405afa127b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement: 1
-  platformMovementSpeed: 10
-  failSpeed: 0
 --- !u!65 &8033729343472066619
 BoxCollider:
   m_ObjectHideFlags: 0

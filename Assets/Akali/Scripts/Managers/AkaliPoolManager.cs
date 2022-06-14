@@ -26,14 +26,5 @@ namespace Akali.Scripts.Managers
             }
         }
         
-        public GameObject DequeueRandomLevel()
-        {
-            var randomLevelPool = GetPoolList<MovementController>();
-            var randomLevel = Random.Range(0, randomLevelPool.Count);
-            var x = randomLevelPool[randomLevel];
-            var prefLevel = pools.list.Where(i => i.poolPrefab.name == x.poolPrefab.name).First();
-            prefLevel.poolPrefab.SetActive(true);
-            return prefLevel.poolPrefab;
-        }
     }
 }
