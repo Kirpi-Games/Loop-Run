@@ -8,15 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mavi
-  m_Shader: {fileID: 4800000, guid: 08ed0d9dfc7b9d54480990896ab62fe8, type: 3}
+  m_Shader: {fileID: 4800000, guid: 39863a74ba34d9a47a33d8789651486d, type: 3}
   m_ShaderKeywords: CURVEDWORLD_BEND_ID_1 CURVEDWORLD_BEND_TYPE_CLASSICRUNNER_Z_POSITIVE
     _EMISSION
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: CurvedWorld_Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -70,9 +69,9 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RampSmooth: 0.1
+    - _RampSmooth: 0.603
     - _RampSmoothOtherLights: 0.5
-    - _RampThreshold: 0.5
+    - _RampThreshold: 0.716
     - _RampThresholdOtherLights: 0.5
     - _RimMax: 1
     - _RimMin: 0.5
@@ -87,11 +86,11 @@ Material:
     - _ZWrite: 1
     - __dummy__: 0
     m_Colors:
-    - _Color: {r: 0.31716156, g: 1, b: 0.15566039, a: 1}
+    - _Color: {r: 0.37834835, g: 0.8773585, b: 0.26072446, a: 1}
     - _CurvedWorldBendSettings: {r: 2, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0.8207547, b: 0.106066935, a: 1}
-    - _HColor: {r: 0.3066038, g: 0.5124095, b: 1, a: 1}
+    - _HColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
-    - _SColor: {r: 0.15659486, g: 0.3640195, b: 0.6509434, a: 1}
+    - _SColor: {r: 0.16117257, g: 0.3490566, b: 0.11690104, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_BuildTextureStacks: []
