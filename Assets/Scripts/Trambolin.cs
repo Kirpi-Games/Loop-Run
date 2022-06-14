@@ -18,7 +18,8 @@ public class Trambolin : MonoBehaviour
             }
             else
             {
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(0,force,0),ForceMode.Impulse);    
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(0,force,0),ForceMode.Impulse);
+                PlayerController.Instance.animator.SetTrigger("Jump");
             }
             
         }

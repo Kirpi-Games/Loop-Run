@@ -18,6 +18,7 @@ namespace Akali.Scripts.Core
 
         private void MoveZ()
         {
+            PlayerController.Instance.animator.SetBool("isRun",movement);
             if (movement)
             {
                 if (!PlayerController.Instance.isFail)
@@ -28,7 +29,7 @@ namespace Akali.Scripts.Core
                 else
                 {
                     movement = true;
-                    failSpeed = 30;
+                    failSpeed = 20;
                     transform.Translate(Vector3.forward * failSpeed * Time.deltaTime);
                 }
             }

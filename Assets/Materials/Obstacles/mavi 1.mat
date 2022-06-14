@@ -74,28 +74,13 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RampSmooth: 0.564
-    - _RampSmoothOtherLights: 0.5
-    - _RampThreshold: 0.46
-    - _RampThresholdOtherLights: 0.5
-    - _RimMax: 1
-    - _RimMin: 0.5
-    - _Shadow_HSV_H: 0
-    - _Shadow_HSV_S: 0
-    - _Shadow_HSV_V: 0
-    - _Smoothness: 0.2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - __dummy__: 0
     m_Colors:
-    - _Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+    - _Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
     - _CurvedWorldBendSettings: {r: 2, g: 1, b: 0, a: 0}
-    - _EmissionColor: {r: 0.24287377, g: 0.24924834, b: 0.33653098, a: 1}
-    - _HColor: {r: 0.40970984, g: 0.9144361, b: 0.9339623, a: 1}
-    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.3254902}
-    - _SColor: {r: 0.16153437, g: 0.30460122, b: 0.6226415, a: 1}
-    - _SpecColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    - _EmissionColor: {r: 0.3447512, g: 0.3447512, b: 0.3447512, a: 1}
   m_BuildTextureStacks: []

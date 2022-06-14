@@ -17,22 +17,22 @@ public class Spike : MonoBehaviour
 
     void ObstacleTrigger()
     {
-        obstacle.DOLocalMoveY(1.5f, 0.3f);
+        obstacle.DOLocalMoveY(1.5f, 0.1f);
     }
 
     public void SetObstacle()
     {
-        obstacle.DOLocalMoveY(-3.5f, 0.3f);
+        obstacle.DOLocalMoveY(-3.5f, 0.1f);
     }
     
     public void SetObstacleLeft()
     {
-        obstacle.DOLocalMoveY(-3.5f, 0.3f);
+        obstacle.DOLocalMoveY(-3.5f, 0.1f);
         transform.parent.DOMoveX(2,0.4f).SetEase(Ease.Linear);
     }
     public void SetObstacleRight()
     {
-        obstacle.DOLocalMoveY(-3.5f, 0.3f);
+        obstacle.DOLocalMoveY(-3.5f, 0.1f);
         transform.parent.DOMoveX(-2,0.4f).SetEase(Ease.Linear);
     }
 

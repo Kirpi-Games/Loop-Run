@@ -392,7 +392,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuTutorial: {fileID: 71679168952792705}
   playingLevel: {fileID: 71679169287465603}
-  playingCoinBar: {fileID: 71679170161767487}
   background: {fileID: 71679170507998347}
   completeUi: {fileID: 71679169841627478}
   failUi: {fileID: 71679170205693152}
@@ -775,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4980194015400710662, guid: 6f29993448ef74da18334379a2a7ccee, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4980194015400710663, guid: 6f29993448ef74da18334379a2a7ccee, type: 3}
       propertyPath: m_Pivot.x
@@ -866,11 +865,6 @@ PrefabInstance:
 --- !u!224 &71679170161767486 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4980194015400710663, guid: 6f29993448ef74da18334379a2a7ccee, type: 3}
-  m_PrefabInstance: {fileID: 5036031267401180729}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &71679170161767487 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4980194015400710662, guid: 6f29993448ef74da18334379a2a7ccee, type: 3}
   m_PrefabInstance: {fileID: 5036031267401180729}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6502295444658043955

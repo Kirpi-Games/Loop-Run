@@ -277,22 +277,22 @@ Material:
     - _CloudLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _CloudShadowColor: {r: 0.33239606, g: 0.46899295, b: 0.85294116, a: 1}
     - _CloudsLightColor: {r: 0.9292453, g: 0.983361, b: 1, a: 1}
-    - _CloudsShadowColor: {r: 0.94509804, g: 0.9030012, b: 0.5647059, a: 1}
+    - _CloudsShadowColor: {r: 0.20496619, g: 0.880316, b: 0.8867924, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0, g: 0.5054344, b: 1, a: 0}
     - _Color1: {r: 1, g: 1, b: 1, a: 0}
     - _Color2: {r: 0.059472326, g: 0.25068596, b: 0.8088235, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Eq: {r: 1, g: 0.6769777, b: 0.330882, a: 0}
-    - _EquatorColor: {r: 0.47209862, g: 0.9716981, b: 0.92282426, a: 0}
+    - _EquatorColor: {r: 0.60960305, g: 0.85770524, b: 0.9716981, a: 0}
     - _Ground: {r: 0.4779411, g: 0.43111518, b: 0.23545504, a: 0}
-    - _GroundColor: {r: 0.4009434, g: 0.91857475, b: 1, a: 0}
+    - _GroundColor: {r: 0.33333337, g: 0.79820347, b: 1, a: 0}
     - _MoonColor: {r: 1, g: 1, b: 1, a: 1}
     - _Sky: {r: 0.6691177, g: 0.29519898, b: 0.29519898, a: 0}
-    - _SkyColor: {r: 0.7445265, g: 0.9339623, b: 0.86179626, a: 0}
+    - _SkyColor: {r: 0.6933962, g: 1, b: 0.9520932, a: 0}
     - _SkyboxRotationAxis: {r: 0, g: 1, b: 0, a: 0}
     - _Skycol: {r: 0.27941146, g: 0.64219046, b: 1, a: 0}
-    - _SunColor: {r: 1, g: 0.85071, b: 0.66176474, a: 1}
+    - _SunColor: {r: 0.6745283, g: 1, b: 0.9794006, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 0}
     - _Vector1: {r: 0, g: 1, b: 0, a: 0}
     - _water: {r: 0.5, g: 0.5, b: 0.5, a: 1}
