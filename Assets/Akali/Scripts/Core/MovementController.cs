@@ -14,6 +14,7 @@ namespace Akali.Scripts.Core
         private void Awake()
         {
             GameStateManager.Instance.GameStatePlaying.OnExecute += MoveZ;
+            GameStateManager.Instance.GameStatePlaying.OnExecute += GetForward;
         }
 
         private void MoveZ()
@@ -26,21 +27,28 @@ namespace Akali.Scripts.Core
                     transform.Translate(Vector3.back * platformMovementSpeed * Time.deltaTime);
                     failSpeed = 0;
                 }
-                else
-                {
-                    movement = true;
-                    failSpeed = 20;
-                    transform.Translate(Vector3.forward * failSpeed * Time.deltaTime);
-                }
             }
 
             if (Input.GetMouseButtonDown(0) || PlayerController.Instance.isFail)
             {
+                platformMovementSpeed = 10;
                 movement = true;
             }
             else if (Input.GetMouseButtonUp(0))
             {
+                platformMovementSpeed = 0;
                 movement = false;
+            }
+        }
+
+        private void GetForward()
+        {
+            if (PlayerController.Instance.isFail)
+            {
+                platformMovementSpeed = 0;
+                movement = true;
+                failSpeed = 20;
+                transform.Translate(Vector3.forward * failSpeed * Time.deltaTime);   
             }
         }
     }

@@ -25,7 +25,7 @@ namespace Akali.Scripts
         private void StartSwerve()
         {
             if (Input.GetMouseButtonDown(0))
-            {
+            { 
                 MovementController.Instance.movement = true;
                 pressed = true;
                 PlayerController.Instance.isPlay = true;

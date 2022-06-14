@@ -680,8 +680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3beab38162449d04f8aeda9ccfc65d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flag1: {fileID: 0}
-  flag2: {fileID: 0}
+  flag1: {fileID: 6871313540674008286}
+  flag2: {fileID: 7674327756876809347}
 --- !u!1 &8583275310561349144
 GameObject:
   m_ObjectHideFlags: 0
