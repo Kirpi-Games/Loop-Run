@@ -14,10 +14,11 @@ public class Obstacle : MonoBehaviour
         {
             if (!PlayerController.Instance.isFail)
             {
+                DeathCount.Instance.IncreaseDeath();
+                SwerveController.Instance.pressed = false;
                 MaleRagdoll(other.transform);
                 PlayerController.Instance.isFail = true;
                 SwerveController.Instance.sensitivity = 0;
-                SwerveController.Instance.moveSpeed = 0;
                 Taptic.Failure();
                 PlayerController.Instance.MoveLastCheckpoint();    
             }
@@ -28,10 +29,11 @@ public class Obstacle : MonoBehaviour
     {
         if (!PlayerController.Instance.isFail)
         {
+            DeathCount.Instance.IncreaseDeath();
+            SwerveController.Instance.pressed = false;
             MaleRagdoll(other.transform);
             PlayerController.Instance.isFail = true;
             SwerveController.Instance.sensitivity = 0;
-            SwerveController.Instance.moveSpeed = 0;
             Taptic.Failure();
             PlayerController.Instance.MoveLastCheckpoint();    
         }

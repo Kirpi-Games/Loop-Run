@@ -8,6 +8,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DeathCount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gold.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MaleRagdoll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ThornMaze.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -71,6 +74,9 @@
       <workItem from="1655112358240" duration="11573000" />
       <workItem from="1655140419741" duration="561000" />
       <workItem from="1655194219860" duration="874000" />
+      <workItem from="1655209263959" duration="712000" />
+      <workItem from="1655292561390" duration="7153000" />
+      <workItem from="1655315467168" duration="1927000" />
     </task>
     <servers />
   </component>

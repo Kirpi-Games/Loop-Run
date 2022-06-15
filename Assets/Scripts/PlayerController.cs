@@ -34,7 +34,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         if (isFail)
         {
-            transform.DOMoveZ(_checkpoint.transform.position.z + 2, 1).SetEase(Ease.InSine);    
+            transform.DOMoveZ(_checkpoint.transform.position.z + 1, 1).SetEase(Ease.InSine);    
         }
     }
     
@@ -51,9 +51,8 @@ public class PlayerController : Singleton<PlayerController>
         {
             if (transform.position.z <= _checkpoint.transform.position.z + 2 && isFail)
             {
-                SwerveController.Instance.moveSpeed = 10;
-                SwerveController.Instance.sensitivity = 10f;
                 isFail = false;
+                SwerveController.Instance.sensitivity = 10f;
                 GameStateManager.Instance.SetGameState(GameStateManager.Instance.GameStateMainMenu);
                 PlayerController.Instance.ghost.transform.DOScale(0, 0.1f);
                 PlayerController.Instance.male.transform.DOScale(1, 0.1f);

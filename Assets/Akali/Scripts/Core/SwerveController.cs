@@ -24,8 +24,11 @@ namespace Akali.Scripts
 
         private void StartSwerve()
         {
+            PlayerController.Instance.animator.SetBool("isRun",pressed);
             if (Input.GetMouseButtonDown(0))
             {
+                Counter.Instance.ResetTimer();
+                Counter.Instance.timerOn = true;
                 pressed = true;
                 PlayerController.Instance.isPlay = true;
                 secondPos.x = Input.mousePosition.x;
@@ -46,37 +49,35 @@ namespace Akali.Scripts
             PlayerController.Instance.animator.SetBool("isRun",pressed);
             if (pressed)
             {
-                moveSpeed = 10;
                 transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-            }
-            else
-            {
-                moveSpeed = 0;
             }
         }
         
         private void Swerve()
         {
-            Movement();
-            if (Input.GetMouseButtonDown(0))
+            if (!PlayerController.Instance.isFail)
             {
-                pressed = true;
-                firstPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            }
-            else if (Input.GetMouseButton(0) && pressed)
-            {
-                secondPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-                transformX += (secondPos.x - firstPos.x) * sensitivity;
-                transformX = Mathf.Clamp(transformX, -xClamp, xClamp);
-                transform.position = new Vector3(transformX, transform.position.y, transform.position.z);
-                Vector3 movement = new Vector3((secondPos - firstPos).x * sensitivity * turnAmount, 0, speed * Time.deltaTime);
-                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(movement), Time.deltaTime * turnSpeed);
-                firstPos = secondPos;
-            }
-            else if (Input.GetMouseButtonUp(0))
-            {
-                pressed = false;
-                transform.DORotate(new Vector3(0,0,0), .2f);
+                Movement();
+                if (Input.GetMouseButtonDown(0))
+                {
+                    pressed = true;
+                    firstPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                }
+                else if (Input.GetMouseButton(0) && pressed)
+                {
+                    secondPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                    transformX += (secondPos.x - firstPos.x) * sensitivity;
+                    transformX = Mathf.Clamp(transformX, -xClamp, xClamp);
+                    transform.position = new Vector3(transformX, transform.position.y, transform.position.z);
+                    Vector3 movement = new Vector3((secondPos - firstPos).x * sensitivity * turnAmount, 0, speed * Time.deltaTime);
+                    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(movement), Time.deltaTime * turnSpeed);
+                    firstPos = secondPos;
+                }
+                else if (Input.GetMouseButtonUp(0))
+                {
+                    pressed = false;
+                    transform.DORotate(new Vector3(0,0,0), .2f);
+                }    
             }
         }
     }

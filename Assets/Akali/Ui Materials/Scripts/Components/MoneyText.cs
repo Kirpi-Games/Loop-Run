@@ -38,7 +38,7 @@ namespace Akali.Ui_Materials.Scripts.Components
             var newMoney = PlayerPrefs.GetMoney() - decrease;
             text.DOScale(startScale * 1.2f, 0.6f).OnComplete(() => text.DOScale(startScale, 0.2f));
             text.DOColor(decreaseColor, 0.6f).OnComplete(() => text.DOColor(startColor, 0.2f));
-            text.DOCounter(currentMoney, PlayerPrefs.GetMoney(), 0.6f).OnComplete(() => PlayerPrefs.SetMoney(newMoney));
+            text.DOCounter(currentMoney, newMoney, 0.6f).OnComplete(() => PlayerPrefs.SetMoney(newMoney));
         }
     }
 }
