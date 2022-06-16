@@ -27,11 +27,11 @@ public class DeathCount : Singleton<DeathCount>
         text.DOScale(startScale * 1.2f, 0.6f).OnComplete(() => text.DOScale(startScale, 0.2f));
         text.DOColor(decreaseColor, 0.6f).OnComplete(() => text.DOColor(startColor, 0.2f));
         text.DOCounter(currentDeath, newDeath, 0.6f);
+        deathCount = newDeath;
     }
     
     public void IncreaseDeath()
     {
-        deathCount += 1;
         DisplayCount();
     }
 }
