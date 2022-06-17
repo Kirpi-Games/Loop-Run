@@ -7,7 +7,7 @@ namespace Akali.Ui_Materials.Scripts
     public class GameUiManager : Singleton<GameUiManager>
     {
         public GameObject mainMenuTutorial;
-        public GameObject playingLevel;
+        //public GameObject playingLevel;
         //public GameObject playingCoinBar;
         public GameObject background;
         public GameObject completeUi;
@@ -46,7 +46,7 @@ namespace Akali.Ui_Materials.Scripts
 
         public void SetActivePlayingUi()
         {
-            playingLevel.SetActive(!playingLevel.activeSelf);
+            //playingLevel.SetActive(!playingLevel.activeSelf);
             //playingCoinBar.SetActive(!playingCoinBar.activeSelf);
         }
 

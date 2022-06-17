@@ -204,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563706460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 200}
+  m_LocalPosition: {x: 0, y: 0, z: 300}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -477,7 +477,7 @@ Camera:
   m_FOVAxisMode: 1
   m_SensorSize: {x: 27.33, y: 20.5}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 29.9
+  m_FocalLength: 28.017403
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -486,7 +486,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 250
-  field of view: 37.84439
+  field of view: 40.189487
   orthographic: 0
   orthographic size: 9.5
   m_Depth: -1
@@ -511,14 +511,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.22452694, y: -0, z: -0, w: 0.97446793}
-  m_LocalPosition: {x: 0, y: 5.31, z: -7.37}
+  m_LocalRotation: {x: 0.21382524, y: -0, z: -0, w: 0.97687197}
+  m_LocalPosition: {x: 0, y: 4.22, z: -3.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 25.95, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.693, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,6 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecba3a294c9ba43dcb155b133b471bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followOffset: {x: 0, y: 3.03, z: -4.96}
 --- !u!1 &1204691948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b109262a4bc4fe14f9fefe0b58b84259, type: 3}
@@ -592,16 +593,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop:
   - {fileID: 4048371752090034694, guid: dcf721fe81027e342a5b92aef5aa7246, type: 3}
-  - {fileID: 8211258035585928781, guid: 54efed3ce3ba82b4ca2659bc9ceab89f, type: 3}
-  - {fileID: 6251620240251827405, guid: def7760ad974d44418bf027edd2c87e8, type: 3}
-  - {fileID: 4222391337377525967, guid: a791ad1cf0184244e948c93bbf39f2e7, type: 3}
-  - {fileID: 3533321310006056933, guid: 32dd83e0467c97645beed9c4ad7befc5, type: 3}
+  - {fileID: 7178352019670260500, guid: 54efed3ce3ba82b4ca2659bc9ceab89f, type: 3}
+  - {fileID: 2978938855010098753, guid: def7760ad974d44418bf027edd2c87e8, type: 3}
+  - {fileID: 7465418012966423700, guid: a791ad1cf0184244e948c93bbf39f2e7, type: 3}
+  - {fileID: 1354978258862692213, guid: 32dd83e0467c97645beed9c4ad7befc5, type: 3}
   - {fileID: 4808701042755271470, guid: 830da97f9804dff47aec5d705286ae65, type: 3}
-  - {fileID: 3413303671695728834, guid: c88a44d3b6f8d654aa3cb8ee473137f0, type: 3}
-  - {fileID: 3868353976949516860, guid: 2fa99e66c27ae0941a5a097b101b958a, type: 3}
-  - {fileID: 4291002771118252310, guid: c6a369aad5f58d14faf7d706ffca72c4, type: 3}
+  - {fileID: 5354642285097107519, guid: c88a44d3b6f8d654aa3cb8ee473137f0, type: 3}
+  - {fileID: 2483821453022806810, guid: 2fa99e66c27ae0941a5a097b101b958a, type: 3}
+  - {fileID: 709697199798323255, guid: c6a369aad5f58d14faf7d706ffca72c4, type: 3}
   - {fileID: 1145238172833234474, guid: 105ff8679d4b67b45919e20196b5dbde, type: 3}
   - {fileID: 1669551601664850713, guid: 1b541b6cd63e5ad44bbc265e9daebb08, type: 3}
+  - {fileID: 4808701042755271470, guid: 830da97f9804dff47aec5d705286ae65, type: 3}
+  - {fileID: 4602807509307873827, guid: 1a6c91ead8124e44b86088d896f8ed0e, type: 3}
+  - {fileID: 1402114627411997820, guid: df078b1aab7cb774e9df2ef93b437131, type: 3}
+  - {fileID: 8997960868292921515, guid: e7a248f4e9c63d04a9b476c750a14575, type: 3}
+  - {fileID: 3266212812435257215, guid: 295a0dd5cc3eef94ebd06be1914f4a76, type: 3}
+  - {fileID: 4696280431954593921, guid: efbc20a3087d12e4fa91f1d8731122a6, type: 3}
+  - {fileID: 4808701042755271470, guid: 830da97f9804dff47aec5d705286ae65, type: 3}
   zSpawn: 100
   tileLenght: 100
 --- !u!4 &1344333661
@@ -1013,7 +1021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067905353}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -900}
+  m_LocalPosition: {x: 0, y: 0, z: -1500}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

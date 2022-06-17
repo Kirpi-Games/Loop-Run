@@ -29,7 +29,6 @@ namespace Akali.Scripts
             {
                 Counter.Instance.ResetTimer();
                 Counter.Instance.timerOn = true;
-                pressed = true;
                 PlayerController.Instance.isPlay = true;
                 secondPos.x = Input.mousePosition.x;
                 AkaliLevelManager.Instance.LevelIsPlaying();

@@ -6,7 +6,7 @@ namespace Akali.Ui_Materials.Scripts.Components
 {
     public class LevelText : MonoBehaviour
     {
-        private void OnEnable()
+        private void Update()
         {
             gameObject.GetComponent<TextMeshProUGUI>().text = $"LEVEL {PlayerPrefs.GetLevelText()}";
         }

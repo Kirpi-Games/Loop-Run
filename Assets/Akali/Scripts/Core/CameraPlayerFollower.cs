@@ -6,12 +6,9 @@ namespace Akali.Scripts.Core
     public class CameraPlayerFollower : Singleton<CameraPlayerFollower>
     {
         private const float FollowSpeed = 0.825f;
-        private Vector3 followOffset;
+        public Vector3 followOffset;
 
-        private void Start()
-        {
-            followOffset = Vector3.zero + transform.position;
-        }
+        
 
         public void LateUpdate()
         {

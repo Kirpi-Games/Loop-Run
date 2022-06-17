@@ -70,6 +70,8 @@ public class Counter : Singleton<Counter>
             print("Ragdoll");
             var ragdollMale = AkaliPoolManager.Instance.Dequeue<MaleRagdoll>();
             ragdollMale.transform.position = spawn.transform.position + new Vector3(0,0,2);
+            var nuke = AkaliPoolManager.Instance.Dequeue<Nuke>();
+            nuke.transform.position = spawn.transform.position + new Vector3(0,0,2);
                 
         }
     }
