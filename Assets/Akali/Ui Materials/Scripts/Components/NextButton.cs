@@ -32,9 +32,9 @@ namespace Akali.Ui_Materials.Scripts.Components
         {
             if (!PlayerController.Instance.isFail)
             {
-                GameUiManager.Instance.completeUi.gameObject.transform.DOScale(1, 0.35f).SetEase(Ease.Linear);
-                yield return new WaitForSeconds(0.6f);
-                GameUiManager.Instance.completeUi.gameObject.transform.DOScale(0, 0.35f).SetEase(Ease.Linear);    
+                GameUiManager.Instance.completeUi.gameObject.transform.DOScale(1, 0.45f).SetEase(Ease.Linear);
+                yield return new WaitForSeconds(0.7f);
+                GameUiManager.Instance.completeUi.gameObject.transform.DOScale(0, 0.45f).SetEase(Ease.Linear);    
             }
         }
     }

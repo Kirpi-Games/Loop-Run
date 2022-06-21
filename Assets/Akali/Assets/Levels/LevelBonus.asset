@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0e6bc0ca44d425ca2d0017868e79aa, type: 3}
   m_Name: LevelBonus
   m_EditorClassIdentifier: 
-  level: {fileID: 5121733924583887911, guid: f6fb51c1c63f560438da609a3edf3ae5, type: 3}
+  level: {fileID: 1805530830273873455, guid: f6fb51c1c63f560438da609a3edf3ae5, type: 3}

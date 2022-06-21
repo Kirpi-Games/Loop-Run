@@ -27,7 +27,6 @@ namespace Akali.Scripts
             PlayerController.Instance.animator.SetBool("isRun",pressed);
             if (Input.GetMouseButtonDown(0))
             {
-                Counter.Instance.ResetTimer();
                 Counter.Instance.timerOn = true;
                 PlayerController.Instance.isPlay = true;
                 secondPos.x = Input.mousePosition.x;

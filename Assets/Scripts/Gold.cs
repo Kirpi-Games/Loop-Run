@@ -18,6 +18,7 @@ public class Gold : MonoBehaviour
     {
         if (other.gameObject.layer == 3)
         {
+            Taptic.Medium();
             MoneyText.Instance.IncreaseMoney(gold);
             transform.parent.DOScale(0, 0.2f).SetEase(Ease.Flash);
         }

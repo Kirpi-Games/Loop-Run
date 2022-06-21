@@ -24,6 +24,7 @@ public class Checkpoint : MonoBehaviour
                     ParticleFlag(flag1);
                     ParticleFlag(flag2);
                     Counter.Instance.ResetTimer();
+                    StartCoroutine(Bomb.Instance.GreenLight());
                 }
                 else
                 {
@@ -36,7 +37,7 @@ public class Checkpoint : MonoBehaviour
     public void ParticleFlag(Transform spawn)
     {
         var confetti = AkaliPoolManager.Instance.Dequeue<Confetti>();
-        confetti.transform.position = spawn.transform.position + new Vector3(0,2,0);
+        confetti.transform.position = spawn.transform.position + new Vector3(0,2,2);
         confetti.transform.SetParent(spawn.transform);
     }
 }

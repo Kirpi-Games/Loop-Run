@@ -44,6 +44,7 @@ public class Counter : Singleton<Counter>
                 PlayerController.Instance.MoveLastCheckpoint();
                 timerOn = false;
                 DeathCount.Instance.IncreaseDeath();
+                ResetTimer();
             }
         }
     }

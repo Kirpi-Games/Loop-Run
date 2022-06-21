@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Akali.Scripts;
+using Akali.Scripts.Managers;
 using Akali.Ui_Materials.Scripts.Components;
 using GameAnalyticsSDK.Setup;
 using TMPro;
@@ -30,22 +31,41 @@ public class Upgrade : MonoBehaviour
         switch (gateType)
         {
             case GateType.Countdown:
+                Taptic.Medium();
                 time.SetActive(true);
                 speed.SetActive(false);
                 break;
             case GateType.Health:
                 break;
             case GateType.Speed:
+                Taptic.Medium();
                 time.SetActive(false);
                 speed.SetActive(true);
                 break;
         }
     }
+    
+    public void Particle(bool isRun)
+    {
+        if (isRun)
+        {
+            var speed = AkaliPoolManager.Instance.Dequeue<SpeedPower>();
+            speed.transform.position = PlayerController.Instance.transform.position + new Vector3(0,2,2);
+            speed.transform.SetParent(PlayerController.Instance.transform);    
+        }
+        else
+        {
+            var time = AkaliPoolManager.Instance.Dequeue<TimePower>();
+            time.transform.position = PlayerController.Instance.transform.position + new Vector3(0,2,2);
+            time.transform.SetParent(PlayerController.Instance.transform);
+        }
+        
+    }
 
     private IEnumerator SetTMP(float time)
     {
         yield return new WaitForSeconds(time);
-        tmp.text = goldAmount + gold ;
+        tmp.text = goldAmount.ToString();
     }
 
 
@@ -55,11 +75,13 @@ public class Upgrade : MonoBehaviour
         {
             case GateType.Countdown:
                 CountUpgrade();
+                Particle(false);
                 break;
             case GateType.Health:
                 break;
             case GateType.Speed:
                 SpeedUpgrade();
+                Particle(true);
                 break;
         }
     }
@@ -68,7 +90,7 @@ public class Upgrade : MonoBehaviour
     {
         if (PlayerPrefs.GetMoney() >= goldAmount)
         {
-            SwerveController.Instance.moveSpeed += 0.2f;
+            SwerveController.Instance.moveSpeed += 0.2f + goldAmount/1000;
             MoneyText.Instance.DecreaseMoney(goldAmount);
         }
         
@@ -78,7 +100,7 @@ public class Upgrade : MonoBehaviour
     {
         if (PlayerPrefs.GetMoney() >= goldAmount)
         {
-            Counter.Instance.startTime += 2;
+            Counter.Instance.startTime += 1 + goldAmount/100;
             MoneyText.Instance.DecreaseMoney(goldAmount);
         }
     }

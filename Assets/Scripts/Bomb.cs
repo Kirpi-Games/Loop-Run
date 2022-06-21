@@ -5,35 +5,39 @@ using Akali.Common;
 using Akali.Scripts.Managers.StateMachine;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Bomb : Singleton<Bomb>
 {
-    public Light light;
-
     private float intensity;
-
+    public PostProcessVolume volume;
+    public Material renderer;
 
     private void Awake()
     {
         LightUp();
         GameStateManager.Instance.GameStatePlaying.OnExecute += UpdateLight;
-        GameStateManager.Instance.GameStateMainMenu.OnEnter += GreenLight;
     }
 
-    public void GreenLight()
+    public IEnumerator GreenLight()
     {
-        light.intensity = 3;
-        light.color = Color.green;
+        volume.weight = intensity;
+        //renderer.SetColor("_FirstColor",renderer.GetColor("_SecondColor"));
+        renderer.SetFloat("_Bool",1);
+        renderer.SetFloat("_Bool2",0);
+        yield return new WaitForSeconds(1);
+        //renderer.SetColor("_SecondColor",renderer.GetColor("_FirstColor"));
+        renderer.SetFloat("_Bool",0);
+        renderer.SetFloat("_Bool2",1);
     }
 
     void LightUp()
     {
-        DOTween.To(()=> intensity, x=> intensity = x, 3, 0.5f).SetLoops(-1,LoopType.Yoyo);
+        DOTween.To(()=> intensity, x=> intensity = x, 1, 0.5f).SetLoops(-1,LoopType.Yoyo);
     }
 
     private void UpdateLight()
     {
-        light.color = Color.red;
-        light.intensity = intensity;
+        volume.weight = intensity;
     }
 }
