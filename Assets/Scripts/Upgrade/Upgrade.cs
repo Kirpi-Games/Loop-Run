@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Akali.Scripts;
 using Akali.Scripts.Managers;
 using Akali.Ui_Materials.Scripts.Components;
-using GameAnalyticsSDK.Setup;
 using TMPro;
 using UnityEngine;
 using PlayerPrefs = Akali.Scripts.Utilities.PlayerPrefs;
